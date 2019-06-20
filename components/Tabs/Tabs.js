@@ -51,12 +51,15 @@ class TabItem {
 
 /* START HERE: 
 
-- Select all classes named ".tabs-link" and assign that value to the links variable
+- 1.Select all classes named ".tabs-link" and assign that value to the links variable
+  
+- 2.With your selection in place, now chain a .forEach() method onto the links variable to iterate over the DOM NodeList
 
-- With your selection in place, now chain a .forEach() method onto the links variable to iterate over the DOM NodeList
-
-- In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
+- 3.In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
 
 */
 
-links = document.querySelectorAll();
+let links = document.querySelectorAll('.tabs-link').forEach((link, index) => {
+  const TabLink = new TabLink(link) 
+  });
+// console.log(links);
